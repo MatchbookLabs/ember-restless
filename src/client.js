@@ -39,13 +39,4 @@ Ember.Application.initializer({
   }
 });
 
-Ember.Application.instanceInitializer({
-  name: 'RESTless.Client',
-  initialize: function(applicationInstance) {
-    RESTless.lookupFactory = function() {
-      return applicationInstance._lookupFactory.apply(applicationInstance, arguments);
-    };
-  }
-});
-
 export default Client;
